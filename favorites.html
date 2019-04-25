@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Signed User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body class="text-center">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand text-white border border-info px-3" href="signedUser.html">Rock My World</a>
+        <form class="form-inline">
+            <input type="text" class="mx-4 text-center p-1" placeholder="Artist, Bands or Location" id="inputUserNav"
+                required>
+            <input type="submit" class="submit btn btn-outline-info mr-4">
+        </form>
+
+        <form class="form-inline">
+            <button id="favoritesPage" style="background:none; border:none"><i
+                    class="far fa-heart text-white fa-lg"></i></button>
+            <button class="btn btn-outline-success my-2 my-sm-0 mx-4" type="submit" id="signOutLink">Sign Out</button>
+        </form>
+    </nav>
+    <div class="container-fluid">
+
+        <select id="dropdown"></select>
+
+        <div id="printSavedEvents"></div>
+
+
+        <div class="row" hidden>
+            <div w-type="event-discovery" w-tmapikey="Hc1CDHMvFbPBf3t8PaoGyuzOfvyTLPts"
+                w-googleapikey="AIzaSyDqRHzyXNbaPh3xIcwixY_LgRTX6pdeNW0" w-keyword="concert" w-theme="simple"
+                w-colorscheme="light" w-width="300" w-height="250" w-size="25" w-border="0" w-borderradius="4"
+                w-postalcode="" w-radius="25" w-city="" w-period="custom" w-layout="vertical" w-attractionid=""
+                w-promoterid="" w-venueid="" w-affiliateid="" w-segmentid="" w-proportion="m" w-titlelink="off"
+                w-sorting="groupByName" w-id="id_h2uyke" w-countrycode="US" w-source="ticketmaster"
+                w-startdatetime="2019-04-13" w-enddatetime="2019-12-31" w-latlong=""></div>
+            <script
+                src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
+        </div>
+    </div>
+
+    <script src="assets/javascript/javascript.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+</body>
+
+</html>
